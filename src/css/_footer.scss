@@ -1,0 +1,184 @@
+.footer{
+  position: relative;
+  width: 100%;
+  max-width: 4000px;
+  margin: 0 auto;
+  background-color: #dedce2;
+    &__top{
+      @include center;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      min-height: 36.2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 5rem 1.5rem;
+        &::before{
+          content: '';
+          background-color: $primaryColor;
+          opacity: 0.6;
+          width: 100%;
+          max-width: 4000px;  
+          min-height: 36.2rem;
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+        }
+        &--title{
+          @include fontStyle($secondaryColor, 7rem, 700, center);
+          position: relative;
+        }
+        &--button{
+          @include fontStyle(#000, 3rem, 700, center);
+          position: relative;
+          background-color: #fff;
+          padding: 1rem 4.7rem;
+          border-radius: 1rem;
+          margin-top: 5rem;
+          mix-blend-mode: screen;
+          transition: all .4s;
+            &::before{
+              position: absolute;
+              content: '';
+              z-index: -1;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background: white;
+              border-radius: 0.3em;
+              mix-blend-mode: color-burn;
+              transition: all .1s;
+            }
+            &:hover{
+              color: #fff;
+              mix-blend-mode: normal;
+              background-color: $buttonColor;
+                &::before{
+                  mix-blend-mode: normal;
+                  background-color: $buttonColor;
+                }
+            }
+        }
+    }
+    &__main{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      position: relative;
+      width: 85%;
+      margin: 0 auto;
+        &--branding{
+          @include fontStyle($primaryColor, 5rem, 700, center);
+          padding: 11.5rem 0;
+            span{
+              @include fontStyle($primaryColor, 11.5rem, 700, center);
+              line-height: 12rem;
+            }
+        }
+        &__contact_forms{
+          @include center;
+          flex-direction: column;
+          align-items: flex-end;
+            &--title{
+              @include fontStyle($primaryColor, 4rem, 700, left);
+              width: 75%;
+            }
+            &__list{
+              width: 70%;
+              margin: 1rem 0 0 3rem;
+              list-style: none;
+                &--element{
+                  @include fontStyle($primaryColor, 2rem, 700, left);
+                  height: 25px;
+                  margin: 3.5rem 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                    img{
+                      width: 2.7rem;
+                      display: block;
+                      margin-right: 2rem;
+                    }
+                }
+            }
+        }
+        &__menu{
+          @include center;
+          flex-direction: column;
+            .menu{
+              list-style: none;
+                li{
+                  @include fontStyle($primaryColor, 2rem, 700, center);
+                  margin-bottom: 2rem;
+                  transition: all .3s;
+                    &:hover{
+                      color: $buttonColor;
+                    }
+                }
+            }
+        }
+    }
+    &__author{
+      @include flexLine;
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4rem 2rem 4rem;
+        &--text{
+          @include fontStyle($primaryColor, 1.5rem, 700, center);
+            a{
+              transition: .3s;
+              &:hover{
+                color: $buttonColor;
+              }
+            }
+            &:nth-child(1){
+              text-align: left;
+            }
+            &:nth-child(2){
+              text-align: right;
+            }
+        }
+    }
+    #cookies-message{ 
+      color: white; 
+      font-size: 1.66rem; 
+      padding: 1rem; 
+      text-align: center; 
+      position: fixed; 
+      bottom:0px; 
+      left:0; 
+      right:0; 
+      background-color: rgba(0,0,0,0.4); 
+      z-index: 99; 
+      box-shadow: 0 0 5px rgba(0,0,0,0.4); 
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #accept-cookies-checkbox{ 
+      background-color: $buttonColor; 
+      color: #FFF;
+      border: solid 1px $buttonColor; 
+      transition: all .25s; 
+      padding: .8rem 2rem; 
+      border-radius: 4px; 
+      display: inline-block; 
+      margin-left: 5rem; 
+      text-decoration: none; 
+      cursor: pointer;
+        &:hover{ 
+          background-color: transparent; 
+          border-color: $buttonColor;
+        }
+    }
+}
+
+
+
+@import './rwd/rwd_footer';

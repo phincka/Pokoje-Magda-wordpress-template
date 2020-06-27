@@ -1,0 +1,144 @@
+.homepage_banner{
+  width: 100%;
+  height: 100vh;
+  max-width: 4000px;
+  max-height: 1080px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include center;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      max-width: 4000px;
+      max-height: 1080px;
+      background-color: $primaryColor;
+      opacity: 0.5;
+    }
+    &__titles{
+      width: 100%;
+      position: relative;
+      padding: 0 10rem;
+        &--title{
+          @include fontStyle($secondaryColor, 10.7rem, 700, center);
+        }
+        &--subtitle{
+          @include fontStyle($secondaryColor, 24rem, 700, center);
+          line-height: 20rem;
+        }
+    }
+}
+.homepage_rooms{
+  @include center;
+  flex-direction: column;
+  margin-top: 15rem;
+    &--title{
+      @include fontStyle($primaryColor, 11.9rem, 700, center);
+      margin-bottom: 2rem;
+    }
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(3, 43rem);
+      grid-template-rows: 1fr;
+      grid-column-gap: 5rem;
+      grid-row-gap: 0px;
+      list-style: none;
+      margin-top: 5rem;
+    }
+    &__room{
+      @include center;
+      min-height: 59.7rem;
+      flex-direction: column;
+      justify-content: flex-start;
+        &--thumbnail{
+          width: 100%;
+          height: 33rem;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+        }
+        &__info{
+          border: 1px solid #a9a9a9;
+          border-top: none;
+          min-height: 27rem;
+        }
+        &--title{
+         @include fontStyle($primaryColor, 4rem, 700, center);
+         padding: 1.2rem 1rem;
+        }
+        &--description{
+         @include fontStyle(#a9a9a9, 2rem, 700, center);
+         padding: 0 1.5rem;
+         margin-bottom: 1.5rem;
+        }
+        &__pricing{
+          width: 100%;
+          @include flexLine;
+          align-items: flex-start;
+            &--price{
+              @include fontStyle(#fff, 2.6rem, 700, center);
+              background-color: #ada8b6;
+              padding: 2rem;
+              position: relative;
+              top: 4.2rem;
+              left: 2rem;
+              width: 13rem;
+              height: 13rem;
+                span{
+                  @include fontStyle(#fff, 3.9rem, 700, center);
+                }
+            }
+            &--button{
+              @include button-small;
+              margin: 5.5rem 1.5rem 2.5rem 0;
+            }
+        }
+    }
+    &--button{
+      @include button-big;
+      margin-top: 12rem;
+    }
+}
+
+.homepage_gallery{
+  margin-top: 15rem;
+    &--title{
+      @include fontStyle($primaryColor, 11.9rem, 700, center);
+      background-color: #dedce2;
+      padding: 5rem 0 27.7rem 0;
+      width: 100%;
+      max-width: 4000px;
+      margin: 0 auto;
+    }
+    &__bottom{
+      @include center;
+      position: relative;
+      top: -20rem;
+    }
+    &__left{
+      @include center;
+      flex-direction: column;
+        &--picture{
+          width: 76.2rem;
+        }
+        &--button{
+          @include button-big;
+          margin-top: 5rem;
+        }
+    }
+    &--right-picture{
+      width: 76.2rem;
+      position: relative;
+      top: 7.5rem;
+      left: -12rem;
+    }
+}
+
+
+
+@import './rwd/rwd_template_homepage';

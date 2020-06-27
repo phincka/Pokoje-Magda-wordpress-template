@@ -1,0 +1,38 @@
+@media screen and (max-width: $mobile) { 
+  .site_banner{
+    &--title{
+      font-size: 6rem !important;
+    }
+  }
+  .single_room{
+    width: 90%;
+    &__header{
+      flex-direction: column;
+      &--title{
+        font-size: 4.5rem;
+      }
+      &__info{
+        margin-top: 3rem;
+        &--price{
+          font-size: 3.9rem;
+        }
+      }
+    }
+    &__gallery{
+      &__single-main{
+        height: 50rem;
+      }
+    }
+    &__amenities{
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 5rem;
+      margin-top: 5rem;
+      margin-bottom: 15rem;
+    }
+    &__description{
+      width: 100%;
+    }
+  }
+}
+

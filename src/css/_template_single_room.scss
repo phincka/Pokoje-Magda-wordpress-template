@@ -1,0 +1,93 @@
+.site_banner{
+  &--title{
+    font-size: 8.3rem !important;
+  }
+}
+.single_room{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 15rem;
+    &__header{
+      @include flexLine;
+      align-items: center;
+      margin-top: 7.3rem;
+      margin-bottom: 4rem;
+        &--title{
+          @include fontStyle($primaryColor, 6.6rem, 400, left);
+        }
+        &__info{
+          margin-right: 1rem;
+            &--price{
+              @include fontStyle($primaryColor, 4.9rem, 700, center);
+            }
+            &--period{
+              @include fontStyle($primaryColor, 1.66rem, 400, center);
+            }
+        }
+    }
+    &__gallery{
+      width: 100%;
+        &__preview{
+          @include center;
+        }
+        &__single-main{
+            width: 100%;
+            height: 70rem;
+            display: block;
+        }
+        &__single{
+            width: 14rem;
+            height: 8rem;
+            display: inline-flex;
+            margin: 2.4rem 1.8rem;
+            &--image{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+        }
+    }
+    &__amenities{
+      width: 120rem;
+      margin: 0 auto;
+      margin-top: 9rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 0rem;
+      grid-row-gap: 3rem;
+
+        .amenities_single{
+          @include center;
+            &--icon{
+              max-width: 4rem;
+            }
+            &__info{
+              margin-left: 2.5rem;
+                &--title{
+                  @include fontStyle($primaryColor, 1.66rem, 700, center);
+                }
+                &--text{
+                  @include fontStyle($primaryColor, 1.66rem, 400, center);
+                  margin-top: 5px;
+                }
+            }
+        }
+    }
+    
+    &__description{
+      width: 120rem;
+      margin: 0 auto;
+      margin-top: 10rem;
+        &--title{
+          @include fontStyle($primaryColor, 4.3rem, 700, left);
+          margin-bottom: 3rem;
+        }
+        .wyswig{
+          color: #14747b;
+          padding: 0 2rem;
+        }
+    }
+}
+
+
+@import './rwd/rwd_template_single_room';

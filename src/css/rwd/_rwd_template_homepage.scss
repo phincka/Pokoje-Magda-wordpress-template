@@ -1,0 +1,62 @@
+
+@media screen and (max-width: $laptop) { 
+  
+}
+
+
+@media screen and (max-width: $mobile) { 
+  .homepage_banner{
+    height: 100vh;
+      &::before{
+        height: 100vh;
+      }
+      &__titles{
+        &--title{
+          font-size: 8rem;
+        }
+        &--subtitle{
+          font-size: 18rem;
+          line-height: 18rem;
+        }
+      }
+  }
+  .homepage_rooms{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15rem;
+    &__list{
+      display: block;
+    }
+    &__room{
+      margin-bottom: 10rem;
+    }
+    &--button{
+      margin-top: 5rem;
+    }
+  }
+  .homepage_gallery{
+    &--right-picture{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $minLaptop) { 
+  .homepage_banner{
+    height: 100vh;
+      &::before{
+        height: 100vh;
+      }
+      &__titles{
+        &--title{
+          font-size: 5rem;
+        }
+        &--subtitle{
+          font-size: 11rem;
+          line-height: 11rem;
+        }
+      }
+  }
+
+ 
+}

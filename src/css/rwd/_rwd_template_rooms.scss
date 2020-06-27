@@ -1,0 +1,30 @@
+@media screen and (max-width: $mobile) { 
+  .rooms_list{
+    width: 98%;
+      .rooms_element{
+        display: block;
+          &--thumbnail{
+            width: 100%;
+            max-height: 20rem;
+
+          }
+          &__price-label{
+            left: 70%;
+            margin-top: -7rem;
+          }
+          &__info{
+            width: 100%;
+            margin-top: 5rem;
+          }
+      }
+  }
+  .button-container{
+    @include center;
+    width: 100%;
+    margin-top: 5rem;
+      a{
+        font-size: 3rem !important;
+      }
+  }
+}
+

@@ -1,0 +1,142 @@
+.contact_page{
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 8rem;
+    &__top{
+      @include flexLine;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 8rem;
+    }
+    &__contact_forms{
+      width: calc(100% - 57rem);
+        &--title{
+          @include fontStyle($primaryColor, 4.5rem, 700, left);
+        }
+        &__single{
+          display: flex;
+          align-items: center;
+          margin: 3rem 0 0 1.6rem;
+            &--icon{
+              width: 5.6rem;
+              height: 5.6rem;
+              object-fit: cover;
+            }
+            &--text{
+              @include fontStyle($primaryColor, 2rem, 700, left);
+              margin-left: 3.5rem;
+            }
+        }
+    }
+    &__form{
+      width: 57rem;
+      margin: 0 auto;
+        &--title{
+          @include fontStyle($primaryColor, 4.5rem, 700, left);
+        }
+        .contact{
+            &__header{
+              width: 100%;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-column-gap: 1.6rem;
+              margin: 2rem 0;
+                &--input{
+                  @include fontStyle($primaryColor, 1.66rem, 700, left);
+                  width: 100%;
+                  border-radius: 1rem;
+                  border: 1px solid $buttonColor;
+                  padding: 1.7rem 3.3rem;
+                  transition: .2s;
+                    &::placeholder{
+                      @include fontStyle($primaryColor, 1.66rem, 700, left);
+                      opacity: 0.6;
+                    }
+                    &:focus{
+                      border-color: $buttonColor;
+                    }
+                }
+            }
+            &--textarea{
+              @include fontStyle($primaryColor, 1.66rem, 700, left);
+              width: 100%;
+              border-radius: 1rem;
+              border: 1px solid $buttonColor;
+              padding: 1.7rem 3.3rem;
+              transition: .2s;
+                &::placeholder{
+                  @include fontStyle($primaryColor, 1.66rem, 700, left);
+                  opacity: 0.6;
+                }
+                &:focus{
+                  border-color: $buttonColor;
+                }
+            }
+            &__bottom{
+              @include center;
+              flex-direction: column;
+              margin-top: 2rem;
+                &--privacy{
+                  @include fontStyle($primaryColor, 1.66rem, 700, left);
+                    input{
+                      width: 1.5rem;
+                      height: 1.5rem;
+                      border-radius: 1px;
+                      border: 1px solid $buttonColor;
+                      margin-right: 1.5rem;
+                      transition: .2s;
+                        &:checked{
+                          background-color: $buttonColor;
+                        }
+                    }
+            }
+            .send-button{
+              @include button-big;
+              margin-top: 3rem;
+            }
+            
+          }
+        }
+      }
+    &__map{
+      &--map{
+          width: 100%;
+          height: 40rem;
+          min-height: 300px;
+      }
+    }
+}
+
+.wpcf7-list-item-label{
+  cursor: pointer;
+}
+.wpcf7-not-valid-tip{
+  color: red;
+  font-size: 1.2rem;
+  margin-left: 2.5rem;
+  position: relative;
+  top: .3rem;
+}
+.wpcf7-response-output{
+   margin-top: 20px;
+  font-size: 1.4rem;
+  color: red;
+  margin-left: 2.5rem;
+}
+.screen-reader-response{
+  display: none;
+}
+.wpcf7-mail-sent-ok{
+      width: 78rem;
+    text-align: center;
+    margin: 40px auto 0;
+    padding: 2rem 5rem;
+    border: 1px solid $buttonColor;
+    font-size: 3.6rem;
+    color: $primaryColor;
+    background: $buttonColor;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+@import './rwd/rwd_template_contact';
