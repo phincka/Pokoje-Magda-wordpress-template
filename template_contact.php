@@ -39,22 +39,8 @@
    <iframe class="contact_page__map--map" src="<?php getField('map_address') ?>" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   </div>
 
-  <div class="contact_page__info">
-    <div class="contact_page__info__left"><?php getField('informations') ?></div>
-    <div class="contact_page__info__right">
-      <ul class="contact_page__info__right__list">
-        <?php
-          if( have_rows('documents') ):
-          while ( have_rows('documents') ) : the_row(); 
-
-          $group = get_sub_field('group');
-        ?>	
-          <li class="contact_page__info__right__list--element">
-            <a target="_blank" href="<?php echo $group['url'] ?>"><?php echo $group['label'] ?></a>
-          </li>
-        <?php endwhile; endif; ?>
-      </ul>
-    </div>
+  <div class="contact_page__description wyswig">
+    <?php getField('description') ?>
   </div>
 
 </section>

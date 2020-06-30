@@ -26,13 +26,15 @@
           $featured_post = get_sub_field('room_link'); 
     ?>
       <li class="homepage_rooms__room">
-        <a class="homepage_rooms__room--thumbnail" href="<?php the_permalink($featured_post->ID); ?>"><img src="<?php echo get_sub_field('room_img') ?>" alt="zdjecie-pokoju"></a>
-        <div class="homepage_rooms__room__info">
-          <h3 class="homepage_rooms__room--title"><?php echo $featured_post->post_title ?></h3>
-          <p class="homepage_rooms__room--description"><?php echo $featured_post->short_desctiption ?></p>
-          <div class="homepage_rooms__room__pricing">
-            <p class="homepage_rooms__room__pricing--price"><span><?php echo $featured_post->price . 'zł' ?></span> <br> noc</p>
-            <a class="homepage_rooms__room__pricing--button" href="<?php the_permalink($featured_post->ID); ?>">Sprawdź dostępność</a>
+        <div class="wrap">
+          <a class="homepage_rooms__room--thumbnail" href="<?php the_permalink($featured_post->ID); ?>"><img src="<?php echo get_sub_field('room_img') ?>" alt="zdjecie-pokoju"></a>
+          <div class="homepage_rooms__room__info">
+            <h3 class="homepage_rooms__room--title"><?php echo $featured_post->post_title ?></h3>
+            <p class="homepage_rooms__room--description"><?php echo $featured_post->short_desctiption ?></p>
+            <div class="homepage_rooms__room__pricing">
+              <p class="homepage_rooms__room__pricing--price"><span><?php echo $featured_post->price . 'zł' ?></span> <br> noc</p>
+              <a class="homepage_rooms__room__pricing--button" href="<?php the_permalink($featured_post->ID); ?>">Sprawdź dostępność</a>
+            </div>
           </div>
         </div>
       </li>

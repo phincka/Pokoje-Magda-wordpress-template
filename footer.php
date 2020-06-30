@@ -1,14 +1,17 @@
 </main>
 
 <footer class="footer" >
-  <div class="footer__top" style="background-image: url('<?php getField('footer_banner_picture', 'op') ?>')">
-    <h2 class="footer__top--title"><?php getField('footer_banner_title', 'op') ?></h2>
-    <?php 
-      if( have_rows('contact_button', 'option') ):
-      while ( have_rows('contact_button', 'option') ) : the_row();?>
-        <a class="footer__top--button" href="<?php getSub('url') ?>"><?php getSub('title') ?></a>
-    <?php endwhile; endif; ?>
-  </div>
+  <?php
+    if(is_front_page()): ?>
+      <div class="footer__top" style="background-image: url('<?php getField('footer_banner_picture', 'op') ?>')">
+        <h2 class="footer__top--title"><?php getField('footer_banner_title', 'op') ?></h2>
+          <?php 
+            if( have_rows('contact_button', 'option') ):
+            while ( have_rows('contact_button', 'option') ) : the_row();?>
+              <a class="footer__top--button" href="<?php getSub('url') ?>"><?php getSub('title') ?></a>
+          <?php endwhile; endif; ?>
+      </div> 
+  <?php endif; ?>
   <div class="footer__main">
     <a class="footer__main--branding" href="<?php echo home_url(); ?>">Pokoje gościnne <br> <span>MAGDA</span></a>
     <div class="footer__main__contact_forms">

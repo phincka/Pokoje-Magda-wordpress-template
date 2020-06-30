@@ -9,14 +9,20 @@
     &__header{
       flex-direction: column;
       &--title{
-        font-size: 4.5rem;
+        font-size: 8rem;
       }
-      &__info{
-        margin-top: 3rem;
+    }
+    &__price-label{
+      position: static;
+      width: 100%;
+      margin-bottom: 5rem;
+      margin-top: 3rem;
         &--price{
-          font-size: 3.9rem;
+          font-size: 6rem;
+            span{
+              font-size: 8rem;
+            }
         }
-      }
     }
     &__gallery{
       &__single-main{

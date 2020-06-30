@@ -5,23 +5,32 @@
 }
 .single_room{
   width: 80%;
+  max-width: 3500px;
   margin: 0 auto;
   margin-bottom: 15rem;
     &__header{
       @include flexLine;
       align-items: center;
-      margin-top: 7.3rem;
-      margin-bottom: 4rem;
+      margin-top: 5rem;
+      margin-bottom: -3rem;
         &--title{
           @include fontStyle($primaryColor, 6.6rem, 400, left);
         }
-        &__info{
-          margin-right: 1rem;
-            &--price{
-              @include fontStyle($primaryColor, 4.9rem, 700, center);
-            }
-            &--period{
-              @include fontStyle($primaryColor, 1.66rem, 400, center);
+    }
+    &__price-label{
+      @include center;
+      position: relative;
+      top: 4rem;
+      left: 7rem;
+      width: 23rem;
+      height: 20rem;
+      padding: 2rem;
+      background-color: #ada8b6;
+      float: right;
+        &--price{
+          @include fontStyle(#fff, 5rem, 700, center);
+            span{
+              @include fontStyle(#fff, 7rem, 700, center);
             }
         }
     }
@@ -52,22 +61,19 @@
       margin: 0 auto;
       margin-top: 9rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-column-gap: 0rem;
       grid-row-gap: 3rem;
-
         .amenities_single{
           @include center;
-            &--icon{
-              max-width: 4rem;
-            }
+          flex-direction: column;
             &__info{
               margin-left: 2.5rem;
                 &--title{
-                  @include fontStyle($primaryColor, 1.66rem, 700, center);
+                  @include fontStyle($buttonColor, 2.5rem, 700, center);
                 }
                 &--text{
-                  @include fontStyle($primaryColor, 1.66rem, 400, center);
+                  @include fontStyle($primaryColor, 1.8rem, 700, center);
                   margin-top: 5px;
                 }
             }
@@ -83,8 +89,19 @@
           margin-bottom: 3rem;
         }
         .wyswig{
-          color: #14747b;
+          color: $primaryColor;
           padding: 0 2rem;
+        }
+    }
+    &__buttons{
+      @include flexLine;
+      align-items: center;
+      width: 90rem;
+      margin: 0 auto;
+      margin-top: 10rem;
+        &--single{
+          @include button-big;
+          width: 32rem;
         }
     }
 }

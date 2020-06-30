@@ -31,7 +31,7 @@
     <a class="rooms_element--thumbnail" href="<?php the_permalink(); ?>">
       <?php the_post_thumbnail(); ?>
       <div class="rooms_element__price-label">
-        <h4 class="rooms_element__price-label--price"><a href="<?php the_permalink(); ?>"><span><?php getField('price') ?>zł</span> <br> za noc</a></h4>
+        <h4 class="rooms_element__price-label--price"><a href="<?php the_permalink(); ?>"><span><?php getField('price') ?>zł</span> <br> noc</a></h4>
         <p class="rooms_element__price-label--period"></p>
       </div>
     </a>

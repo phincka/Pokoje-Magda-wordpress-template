@@ -105,6 +105,12 @@
           min-height: 300px;
       }
     }
+    &__description{
+      width: calc(100% - 57rem);
+      margin:  0 auto;
+      margin-top: 6rem;
+      margin-bottom: 10rem;
+    }
 }
 
 .wpcf7-list-item-label{

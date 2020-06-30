@@ -20,10 +20,9 @@
                 margin: 0 3.5rem;
                 transition:all .5s ease;
                   &::after{
-                    @include header-line(2px, $buttonColor, .3s);
+                    @include header-line(3.5px, $buttonColor, .3s);
                     margin-top: 3px;
                   }
-                
                   &:hover{
                     &::after{
 											transform: scaleX(.7) translateX(50%);

@@ -9,7 +9,7 @@
 	<?php $description = (get_field('description-seo')) ? get_field('description-seo') : get_bloginfo('description') ?>
 	<meta name="description" content="<?php echo $description ?>">
 
-	<meta name="theme-color" content="#065143">
+	<meta name="theme-color" content="#81b748">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
