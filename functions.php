@@ -68,7 +68,7 @@ function include_scripts()
     global $wp_query;
     $page_name = get_post_meta( $wp_query->post->ID, '_wp_page_template', true);
      
-    if( $page_name == 'template_gallery.php' || $page_name == 'template_spa.php'){
+    if( $page_name == 'template_gallery.php' || $page_name == 'template_single_room.php'){
         wp_enqueue_script('lightbox', get_template_directory_uri() . '/dist/js/fslightbox.js', '', '1.0', true);
     }
     wp_enqueue_script('mainjs', get_template_directory_uri() . '/dist/js/app.js', '', '1.0', true);

@@ -16,4 +16,4 @@
 
 <img src="https://i.paste.pics/79ba834f5338d6ac9bfda1108a1e4be3.png" width="600">
 
-#### Website is available [HERE](https://pokoje-magda.hincka.pl/)
+#### Website is available [HERE](https://www.pokojemagda.pl/)
